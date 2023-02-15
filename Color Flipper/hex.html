@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .nav {
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            background-color: bisque;
+            justify-content: center;
+        }
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+        ul li a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: blueviolet;
+        }
+        .container {
+            margin-top: 50px;
+            justify-items: center;
+        }
+        .content {
+            text-align: center;
+            background-color: black;
+            color: white;
+            width: 30%;
+            padding: 30px 0;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+
+        }
+        .btn {
+            display: block;
+            margin: 0 auto;
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+            border: blue 1px solid;
+            font-weight: 800;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div>Color Flipper</div>
+        <ul class="nav-list">
+            <li><a href="index.html">Input</a></li>
+            <li><a href="hex.html">Hex</a></li>
+        </ul>
+        </nav>
+        <main>
+            <div class="container">
+                <h2 class="content">Background-Color : 
+                    <span class="color">White</span>
+                </h2>
+                <button class="btn " id="btn">Click Me</button>
+            </div>
+        </main>
+    <script src="hex.js"></script>
+</body>
+</html>
