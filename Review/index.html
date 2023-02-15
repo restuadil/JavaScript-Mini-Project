@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <script src="https://kit.fontawesome.com/af4d72a67f.js" crossorigin="anonymous"></script>
+    <style>
+        .container {
+            max-width: 50%;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .card {
+            margin: 0 auto;
+            width: fit-content;
+            height: 510px;
+            background-color: white;
+            padding-top: 5px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        }
+        img {
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .name {
+            color: rgb(32, 145, 126);
+            font-weight: 700;
+            font-size: 30px;
+            margin: 10px 0;
+        }
+        .job {
+            color: rgb(87, 230, 206);
+            font-weight: 400;
+            font-size: 20px;
+            margin: 2px 0;
+        }
+        .description {
+            letter-spacing: 1px;
+        }
+        button {
+            margin:  0 30px;
+            padding: 5px 50px;
+            background-color: rgb(153, 253, 253);
+            border: 1px rgb(6, 182, 182) solid;
+        }
+        :hover.left{
+            cursor: pointer;
+            background-color: aqua;
+        }
+        :hover.right{
+            cursor: pointer;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="person-1.jpeg" alt="" width="50%" height="50%" id="person-1">
+            <h2 class="name">Sara Jones</h2>
+            <h2 class="job">UI | UX Designer</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia temporibus odio repellat recusandae esse ipsam voluptatem voluptatibus ab perspiciatis quasi totam molestiae quas accusamus harum quaerat, commodi nisi libero corporis sed tenetur iure magni velit ipsa ratione! Fuga veritatis aliquam pariatur harum minima, quis, impedit voluptate autem ipsam delectus facilis.<p>
+                <div>
+                    <button class="left">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="right">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+        </div>
+    </div>
+    <script src="data.js"></script>
+</body>
+</html>
