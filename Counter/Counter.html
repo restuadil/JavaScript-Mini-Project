@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: darkslategray;
+        }
+        .container {
+            margin:50px auto;
+            background-color: rgb(219, 219, 219);
+            padding: 20px 10px;
+            border-radius: 10px;
+            max-width: 50%;
+            justify-content: center;
+            justify-items: center;
+        }
+        .content {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            font-size: 100px;
+            color:darkslategrey ;
+            text-align: center;
+        }
+        .btn {
+            display: flex;
+            justify-content: space-around;
+        }
+        .btn button{
+            margin: 10px 0;
+            background-color: darkslategray;
+            padding: 10px 20px; 
+            color: azure;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: white 1px solid;
+            border-radius: 5px;
+        }
+        :hover.decrease{
+            background-color: rgb(77, 168, 168);
+            cursor: pointer;
+        }
+        :hover.reset{
+            background-color: rgb(77, 168, 168);
+            cursor: pointer;
+        }
+        :hover.increase{
+            background-color: rgb(77, 168, 168);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+    <main>
+        <div class="container">
+            <p class="content">0</p>
+            <div class="btn">
+                <button class="decrease">Decrease</button>
+                <button class="reset">Reset</button>
+                <button class="increase">Increase</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        let count = 0;
+        
+        // get content
+        const content = document.querySelector(".content")
+        // get all buttons
+        const btns = document.querySelectorAll("button")
+        // console.log(btns)
+
+        btns.forEach( (btn)=> {
+            // console.log(btn)
+            btn.addEventListener("click", (e)=> {
+               const styles = e.currentTarget.classList
+               if(styles.contains('decrease')){
+                count = count - 1
+               }
+               else if(styles.contains('increase')){
+                count = count  + 1
+               }
+               else{
+                count = 0
+               }
+
+               if(count < 0) {
+                content.style.color = "red"
+               }
+               else if (count > 0 ) {
+                content.style.color = "green"
+               }
+               else {
+                content.style.color = "darkslategray"
+               }
+               content.textContent = count
+            })
+
+        })
+
+
+
+    </script>
+</body>
+</html>
